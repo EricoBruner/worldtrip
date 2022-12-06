@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Box, Flex, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 export default function SlidePagination() {
   return (
@@ -30,13 +31,18 @@ export default function SlidePagination() {
             h={['250px','450px']}
             justify={'center'}
             direction={'column'}
-          >
-              <Text color={'gray.50'} fontSize={['24px','36px','40px','48px']} fontWeight={'bold'}>
-                Europa
-              </Text>
-              <Text color={'gray.100'} fontSize={['14px','18px','20px','24px']} fontWeight={'bold'}>
-                O continente mais antigo.
-              </Text>
+          > 
+                <Text color={'gray.50'} fontSize={['24px','36px','40px','48px']} fontWeight={'bold'}>
+                  <Link href={'continents/europe'}>
+                    Europa
+                  </Link>
+                </Text>
+                <Text color={'gray.100'} fontSize={['14px','18px','20px','24px']} fontWeight={'bold'}>
+                  <Link href={'continents/europe'}>
+                    O continente mais antigo.
+                  </Link>
+                </Text>
+              
           </Flex>
         </SwiperSlide>
 
@@ -48,10 +54,10 @@ export default function SlidePagination() {
             justify={'center'}
             direction={'column'}
           >
-              <Text color={'gray.50'} fontSize={'48px'} fontWeight={'bold'}>
+              <Text color={'gray.50'} fontSize={['24px','36px','40px','48px']} fontWeight={'bold'}>
                 América do Norte
               </Text>
-              <Text color={'gray.100'} fontSize={'24px'} fontWeight={'bold'}>
+              <Text color={'gray.100'} fontSize={['14px','18px','20px','24px']} fontWeight={'bold'}>
                 O continente mais belo.
               </Text>
           </Flex>
